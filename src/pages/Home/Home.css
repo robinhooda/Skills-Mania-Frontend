@@ -1,0 +1,24 @@
+.hero-image{
+    width: 90%;
+    padding: 2rem;
+}
+
+.header{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   padding: 0 10rem;
+   align-items: center;
+   height: 90vh;
+}
+
+.header-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.large-button{
+    border-radius: 0 !important;
+    margin:2rem;
+}
