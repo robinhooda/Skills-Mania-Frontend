@@ -6,6 +6,7 @@ import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import Signup from './pages/Signup/Signup';
 import Page404 from './pages/Page404/Page404';
+import Category from './pages/Category/Category';
 
 const App=()=> {
   return (
@@ -16,6 +17,7 @@ const App=()=> {
           <Route path='/' element={<Home />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signUp' element={<Signup />} />
+          <Route path='/category' element={<Category />} />
           <Route path='*' element={<Page404 />} />
         </Routes>
       </div>

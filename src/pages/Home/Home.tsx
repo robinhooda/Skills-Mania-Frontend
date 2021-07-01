@@ -1,5 +1,6 @@
 import React from 'react'
 import TestSVG from "../../assets/images/test.svg"
+import {Link} from "react-router-dom"
 import "./Home.css"
 function Home() {
     return (
@@ -9,10 +10,12 @@ function Home() {
             </div>
             <div className="header-content">
                 <h2>Test your programming skills</h2>
-                <button className="primary-button large-button">
-                    Explore categories 
-                    <i className="fas fa-arrow-right pad-l-sm"></i>
-                </button>
+                <Link to="/category">
+                    <button className="primary-button large-button">
+                        Explore categories 
+                        <i className="fas fa-arrow-right pad-l-sm"></i>
+                    </button>
+                </Link>
             </div>
         </header>
     )
