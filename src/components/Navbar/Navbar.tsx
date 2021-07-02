@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Navbar.css'
 import { Link } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
@@ -11,35 +11,33 @@ const Navbar = () => {
 //     setAuth(null)
 //     localStorage.removeItem("auth-token");
 //   }
-const auth = false;
+const [isloggedIn,setIsLoggedIn] = useState(false)
 
   return (
     <nav className='navbar'>
       <div className='navbar-brand'>
-        <div className='navbar-brand--name  bold'>Skills-Mania</div>
+        <Link to="/" className="links">
+          <div className='navbar-brand--name  bold'>Skills-Mania</div>
+        </Link>
       </div>
       <>
-        {true ? (
-          <button className='flat-button' onClick={()=>{}}>
+        {isloggedIn ? 
+        <div>
+              <Link
+                to='/highscore'
+              >
+                <button className="plain-transparent-button">
+
+                High Scores
+                </button>
+              </Link>
+              <button className='flat-button mar-l-md' onClick={()=>setIsLoggedIn(!isloggedIn)}>
+            Logout
+          </button>
+          </div> : (
+          <button className='flat-button' onClick={()=>setIsLoggedIn(!isloggedIn)}>
             Login
           </button>
-        ) : (
-          <>
-            <div>
-              <Link
-                className={pathname === '/login' ? 'links bold' : 'links'}
-                to='/login'
-              >
-                Login
-              </Link>
-            </div>
-            <Link
-              className={pathname === '/signUp' ? 'links bold' : 'links'}
-              to='/signUp'
-            >
-              <button className='transparent-button'>Register</button>
-            </Link>
-          </>
         )}
      </>
     </nav>
