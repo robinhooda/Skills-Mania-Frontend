@@ -1,8 +1,14 @@
-import React from 'react'
+import { useEffect } from 'react'
 import TestSVG from "../../assets/images/test.svg"
 import {Link} from "react-router-dom"
 import "./Home.css"
+import { useData } from '../../contexts/DataContext';
 function Home() {
+    const { dispatch } = useData();
+
+    useEffect(() => {
+      dispatch({ type: "RESET_STATE" });
+    }, []);
     return (
         <header className="header">
             <div>
