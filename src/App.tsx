@@ -8,6 +8,7 @@ import Signup from './pages/Signup/Signup';
 import Page404 from './pages/Page404/Page404';
 import Category from './pages/Category/Category';
 import Quiz from './pages/Quiz/Quiz';
+import Result from "./pages/Result/Result";
 
 const App=()=> {
   return (
@@ -20,6 +21,7 @@ const App=()=> {
           <Route path='/signUp' element={<Signup />} />
           <Route path='/category' element={<Category />} />
           <Route path='/quiz/:quizId' element={<Quiz />} />
+          <Route path='/result' element={<Result />} />
           <Route path='*' element={<Page404 />} />
         </Routes>
       </div>
