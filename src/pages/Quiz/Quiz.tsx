@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useData } from "../../contexts/DataContext";
 import { Option, Question } from "../../data/quiz.types";
+import { Link } from "react-router-dom";
 import "./Quiz.css"
 
 export default function Quiz() {
@@ -53,6 +54,11 @@ export default function Quiz() {
 
   return currentQuiz && currentQuestion ? (
     <div className="Quiz">
+      <Link to='/category'>
+        <button className='path back-button bold' onClick={()=>dispatch("RESET_SCORE")}>
+          <i className='fas fa-chevron-left pad-r-xs'></i>Back
+        </button>
+      </Link>
       <h2 className="text-center">
        {currentQuiz.name}
       </h2>
