@@ -73,7 +73,7 @@ export default function Quiz() {
               <button
                 disabled={!isClickEnabled}
                 onClick={() => optionClickHandler(option)}
-                className={`quiz-options--button block w-full rounded-3xl text-lg font-semibold my-6 py-6 bg-gray-800 transition-colors duration-200 ease-in ${
+                className={`quiz-options--button ${
                   !isClickEnabled && option.isAnswer && "green-button"
                 } ${
                   option.id === selectedOptionId &&
