@@ -35,9 +35,12 @@ const [isloggedIn,setIsLoggedIn] = useState(false)
             Logout
           </button>
           </div> : (
+          <Link to="/login">
+
           <button className='flat-button' onClick={()=>setIsLoggedIn(!isloggedIn)}>
             Login
           </button>
+          </Link>
         )}
      </>
     </nav>
