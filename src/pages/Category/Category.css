@@ -19,6 +19,7 @@
 }
 
 .category-card {
+  position: relative;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -44,4 +45,12 @@
 .path{
     position: absolute;
     top:5rem;
+}
+
+/* TO DO - fix opacity and position of image */
+.category-card .category-cover-image{  
+  position: fixed;
+  top: 1px;
+  opacity: 0.2;
+  width: 100px;
 }
