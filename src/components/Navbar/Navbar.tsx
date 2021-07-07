@@ -11,6 +11,8 @@ const Navbar = () => {
 //     setAuth(null)
 //     localStorage.removeItem("auth-token");
 //   }
+
+// TO DO- take isloggedin value from useAuth
 const [isloggedIn,setIsLoggedIn] = useState(false)
 
   return (
@@ -20,27 +22,26 @@ const [isloggedIn,setIsLoggedIn] = useState(false)
           <div className='navbar-brand--name  bold'>Skills-Mania</div>
         </Link>
       </div>
+      {/* TO DO- fix navbar after adding auth */}
       <>
         {isloggedIn ? 
         <div>
-              <Link
+              {/* <Link
                 to='/highscore'
-              >
+              > */}
                 <button className="plain-transparent-button">
-
-                High Scores
+                  High Scores
                 </button>
-              </Link>
+              {/* </Link> */}
               <button className='flat-button mar-l-md' onClick={()=>setIsLoggedIn(!isloggedIn)}>
-            Logout
-          </button>
-          </div> : (
-          <Link to="/login">
-
+                Logout
+              </button>
+        </div> : (
+        // <Link to="/login">
           <button className='flat-button' onClick={()=>setIsLoggedIn(!isloggedIn)}>
             Login
           </button>
-          </Link>
+        // </Link>
         )}
      </>
     </nav>
